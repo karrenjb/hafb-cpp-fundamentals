@@ -20,15 +20,23 @@ System
 
 ## C++ Basics
 - File Extension: " .cpp"
-```bash
-## g++ Compiler
 
+## g++ Compiler for 1 file
+```bash
 # To Compile
 # -o for output file
 $ g++ main.cpp -o main
 # To run
 $ ./main.exe
 ```
+
+## g++ Compiler for 2 files
+For Example, if you have a library under the 'functions.cpp' and 'function.h' files, and you have a driver under 'run_functions.cpp' you need to compile as follows:
+```bash
+# To compile, list ALL source (cpp) files
+# -o for output file name
+$ g++ functions.cpp run_functions.cpp -o run_functions
+# To run
 
 ### C++ File Template
 ```cpp
