@@ -32,7 +32,9 @@ $ ./main.exe
 
 ### C++ File Template
 ```cpp
-#include  <iostream>
+#include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -50,6 +52,6 @@ int main()
 // Add CMake
 // Add CMake Tools
 
-// Add the plugin to VSCode: Doxygen Documentation Generator
+// Add Documentation comments via Doxygen Documentation Generator
 // Run /** and <Enter>
 ```
