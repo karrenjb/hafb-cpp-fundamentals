@@ -14,6 +14,5 @@ int main ()
     // calculate BMI
     bmi = weight/(height*height);
     cout << "Your BMI is: " << bmi << endl;
-
     return 0;
 }
