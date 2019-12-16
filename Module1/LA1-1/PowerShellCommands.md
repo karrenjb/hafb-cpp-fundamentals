@@ -45,7 +45,10 @@ int main()
 ```cpp
 // Add C/C++ Intellisense
 // Add Code Spell Extension
-// Add 
+// Add Doxygen Documentation Generator
+// Add Markdown All In One
+// Add CMake
+// Add CMake Tools
 
 // Add the plugin to VSCode: Doxygen Documentation Generator
 // Run /** and <Enter>
