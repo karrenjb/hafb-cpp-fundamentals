@@ -12,14 +12,16 @@ $ ls	#list folder
 $ cd <dest>	# change directory
 $ cd..		# parent directory
 $ pwd		# show present working directory
-$ rm <name>	# remove or delete file or director
+$ rm <name>	# remove or delete file or directory
+$ mkdir <name> #make and directory or folder
 System
 . (one dot)	//present working directory
 .. (two dots)	//parent directory
 ```
 
 ## C++ Basics
-- File Extension: " .cpp"
+- File Extension: ".cpp"
+- Header files: ".h"
 
 ## g++ Compiler for 1 file
 ```bash
@@ -37,7 +39,7 @@ For Example, if you have a library under the 'functions.cpp' and 'function.h' fi
 # -o for output file name
 $ g++ functions.cpp run_functions.cpp -o run_functions
 # To run
-
+```
 ### C++ File Template
 ```cpp
 #include <iostream>
@@ -63,3 +65,11 @@ int main()
 // Add Documentation comments via Doxygen Documentation Generator
 // Run /** and <Enter>
 ```
+
+### CMake
+To build a project we need all the rules to be set under 'CMakeLists.txt' file.
+- Create a build folder: '$ mkdir build'
+- Go to the build dir: $ '$ cd build'
+- Run cmake '$ cmake .. -G "MinGW Makefiles"'
+  - The '..' is because your CMakeList.txt is one folder up.
+- Build or compile your code: '$ cmake --build .'  The '.' means to build in in the pwd.
