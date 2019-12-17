@@ -43,3 +43,11 @@ int Max10(std::array<int, 10> nums)
   }
   return max;
 }
+
+void ClearElements(std::array<int, 10>& nums)
+{
+  for(int index = 0; index < nums.size(); ++index)
+  {
+    nums[index] = -99; //set values to -99
+  }
+}
