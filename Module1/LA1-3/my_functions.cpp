@@ -30,3 +30,16 @@ void UpdateStep(int& step)  //take the address of the parameter
     // step = step + 1;
     cout << "New step: " << step <<endl;
 }
+
+int Max10(std::array<int, 10> nums)
+{
+  int max = 0;
+    for(auto num : nums)
+  {
+    if(max <= num)
+    {
+      max = num;
+    }
+  }
+  return max;
+}
