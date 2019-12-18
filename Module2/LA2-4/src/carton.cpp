@@ -1,4 +1,5 @@
 #include "carton.h"
+#include <iostream>
 
 //Constructors have access to private data members
 
@@ -22,4 +23,26 @@ double Carton::width()
 double Carton::height()
 {
     return height_;
+};
+
+void Carton::set_length(double length)
+{
+    length_ = length;
+};
+        
+void Carton::set_width(double width)
+{
+    width_ = width;
+};
+
+void Carton::set_height(double height)
+{
+    height_ = height;
+};
+
+void Carton::ShowInfo()
+{
+  std::cout << "Box Length: " << length() << std::endl;
+  std::cout << "Box Width: " << width() << std::endl;
+  std::cout << "Box Height: " << height() << std::endl;
 };

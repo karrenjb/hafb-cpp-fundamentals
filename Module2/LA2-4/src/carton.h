@@ -11,10 +11,18 @@ class Carton
     public:
         //Constructor: build/create your object
         Carton();
+       
         //Getters
         double length();    //returns length
         double width();     //returns width
         double height();    //returns height
 
+        //Setters
+        void set_length(double length);
+        void set_width(double width);
+        void set_height(double height);
+
+        //Other methods
+        void ShowInfo();
 
 };  //must have a ";"

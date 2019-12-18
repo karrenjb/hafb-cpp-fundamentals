@@ -9,12 +9,16 @@ int main()
   // create a Carton object using the default constructor
 
   Carton box;
-  
-  std::cout << "Box Length: " << box.length() << std::endl;
-  std::cout << "Box Width: " << box.width() << std::endl;
-  std::cout << "Box Height: " << box.height() << std::endl;
 
-  // create a Carton object using the other constructor
+  box.ShowInfo();
+
+  box.set_length(1.1);
+  box.set_width(2.2);
+  box.set_height(3.3);
+
+  box.ShowInfo();
+  
+    // create a Carton object using the other constructor
 
   // create an array of Cartons
 
