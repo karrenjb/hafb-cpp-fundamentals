@@ -9,7 +9,7 @@ int main()
   // create a Carton object using the default constructor
 
   Carton box;
-
+  
   box.ShowInfo();
 
   box.set_length(1.1);
@@ -17,9 +17,12 @@ int main()
   box.set_height(3.3);
 
   box.ShowInfo();
-  
+    
     // create a Carton object using the other constructor
 
+  Carton box2(1,2,3);
+  box2.ShowInfo();
+  
   // create an array of Cartons
 
   // add some valid elements to the array

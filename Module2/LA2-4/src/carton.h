@@ -11,7 +11,10 @@ class Carton
     public:
         //Constructor: build/create your object
         Carton();
-       
+        
+        //Second Constructor
+        Carton(double length, double width, double height);
+
         //Getters
         double length();    //returns length
         double width();     //returns width
