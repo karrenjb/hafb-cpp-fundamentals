@@ -74,5 +74,5 @@ To build a project we need all the rules to be set under 'CMakeLists.txt' file.
 - Run cmake '$ cmake .. -G "MinGW Makefiles"'
   ## The '..' is because your CMakeList.txt is one folder up.
 - Build or compile your code: '$ cmake --build .'  ## The '.' means to build is in the pwd.
-- Then '$ .\<executable name>' to run to compiled code.
+- Then '$ .\bin\ca.exe' to run compiled code
 ```
