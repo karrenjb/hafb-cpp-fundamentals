@@ -9,11 +9,20 @@ class Carton
         double height_;
 
     public:
+        //Static Constants
+        // static const double kMaxSize;
+        static const double kMinLength;
+        static const double kMinWidth;
+        static const double kMinHeight;
+
         //Constructor: build/create your object
         Carton();
         
         //Second Constructor
         Carton(double length, double width, double height);
+
+        //Destructor
+        ~Carton();
 
         //Getters
         double length();    //returns length
@@ -26,6 +35,9 @@ class Carton
         void set_height(double height);
 
         //Other methods
+        void SetMeasurements(double length, double width, double height);
         void ShowInfo();
+        double Volume() const;
+
 
 };  //must have a ";"
