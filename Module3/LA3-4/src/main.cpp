@@ -7,41 +7,15 @@ int main()
 {
 
   Distance d1 (34, 9.5);
+  Distance d2;
+
+  d2 = d1;  //Assignment operator invoked
+  std::cout << d2 << " and " << d1 <<std::endl;
+  Distance d3 = d2; //Assignment operator NOT invoked
+  std::cout << d3 << " and " << d2 <<std::endl;
+  //Initialization is NOT assignment
+  Distance d4(d2);  //
+  std::cout << d4 << " and " << d2 <<std::endl;
   
-  d1.ShowDist();
-
-  Distance d2(10, 8.5);
-  d2.ShowDist();
-
-  Distance d3;
-  d3 = d1 + d2;
-  d3.ShowDist();
-
-  Distance d4;
-  d4 = d1 + d2 + d3;
-  d4.ShowDist();
-
-  //Display int with stdout
-  std::cout << d4 << std::endl;
-
-  Distance d5;
-  d5 = d4 - d3;
-  d5.ShowDist();
-
-  if (d2 < d1)
-  {
-    std::cout << d2 << " is less than " << d1 << std::endl;
-  }
-
-  if (d1 > d2)
-  {
-    std::cout << d1 << " is greater than " << d2 << std::endl;
-  }
-
-  if (d1 == d1)
-  {
-    std::cout << d1 << " is equal to " << d1 << std::endl;
-  }
-    
   return 0;
 }

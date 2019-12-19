@@ -10,6 +10,7 @@ private:
 public:
     Distance() : feet_(0), inches_(0) {};
     Distance(int feet, float inches) : feet_(feet), inches_(inches) {};
+    Distance(const Distance& dist); //Copy Constructor
     ~Distance(){};
 
     //Getters and Setters
@@ -28,7 +29,7 @@ public:
 
     //Task 1: create the - operator
 
-    Distance operator - (Distance rhs) const;
+    friend Distance operator - (Distance lhs, Distance rhs); //Friend operator
 
     //Task 2: create the update_distance() function
 
@@ -39,5 +40,7 @@ public:
     bool operator > (Distance rhs) const;  //Compare objects
 
     bool operator == (Distance rhs) const;  //Compare objects
+
+    Distance operator = (Distance& rhs);  //Assignment Operator
     
 };

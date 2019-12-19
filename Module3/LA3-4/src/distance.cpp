@@ -46,21 +46,18 @@ std::ostream& operator <<(std::ostream& os, const Distance& distance)
     return os;
 }
 
-Distance Distance::operator - (Distance rhs) const
+Distance operator - (Distance lhs, Distance rhs)
 {
-    int feet = feet_ - rhs.feet_;
-    float inches = 0;
+    int ft = lhs.feet_ - rhs.feet_;
+    float in = 0;
     
-    //Update values IF inches > 12
-    if(inches_ < rhs.inches_)
+    if(lhs.inches_ < rhs.inches_)
     {
-        feet -= 1;
-        inches = (inches_ + 12) - rhs.inches_;
+        ft -= 1;
+        in = (lhs.inches_ + 12) - rhs.inches_;
     }
-    
-    Distance temp(feet, inches);
-    
-    return temp;
+   
+    return Distance(ft, in);
 }
 
 void Distance::update_distance(int ft, float in)
@@ -83,3 +80,18 @@ void Distance::update_distance(int ft, float in)
  {
      return (((feet_ * 12) + inches_) == ((rhs.feet_ * 12) + rhs.inches_)) ? true : false;  //Another way of accomplishing the same thing
  }
+
+ Distance Distance::operator = (Distance& rhs)
+ {
+     std::cout << "Assignment operator invoked!" << std::endl;
+     feet_ = rhs.feet_;
+     inches_ = rhs.inches_;
+     return Distance(feet_, inches_);
+ }
+
+Distance::Distance (const Distance& dist)
+{
+    std::cout << "Copy Constructor invoked!" << std::endl;
+    feet_ = dist.feet_;
+    inches_ = dist.inches_;
+}
