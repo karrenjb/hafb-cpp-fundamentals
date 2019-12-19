@@ -20,6 +20,9 @@ int main()
   Distance d4;
   d4 = d1 + d2 + d3;
   d4.ShowDist();
+
+  //Display int with stdout
+  std::cout << d4 << std::endl;
     
   return 0;
 }
