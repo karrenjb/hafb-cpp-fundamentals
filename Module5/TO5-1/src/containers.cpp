@@ -30,3 +30,24 @@ void Display_by_State(std::map<std::string, int> &st_count)
 	}
     std::cout << "A total of "<< total << " records for all states" << std::endl;
 }
+
+void Load_Data(std::vector<Data> &data, const std::string &input_file)
+
+{
+csvstream csvinput(input_file); //open file
+  //Rows have a key = column name, value = cell data
+  std::map<std::string, std::string> row;
+  Data temp;
+  //Extract the animal column
+  while(csvinput >> row)
+  {
+    //The key is the column name
+    std::cout << row["id"] << ", "<< row["name"] << ", "<< row["animal"] << std::endl;
+    temp.id = std::stoic(row["id"]);
+    team.gender = row["gender"];
+    team.school = row["school"]
+	team.state = row["state"];
+    data.push_back(temp);       //load Data struct
+
+  }
+}
